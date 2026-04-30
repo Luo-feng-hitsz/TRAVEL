@@ -1,0 +1,80 @@
+{
+  "os": "Linux-5.15.0-102-generic-x86_64-with-glibc2.31",
+  "python": "CPython 3.10.0",
+  "startedAt": "2026-03-27T11:35:09.436989Z",
+  "args": [
+    "--node-ip-address=10.249.42.56",
+    "--node-manager-port=44729",
+    "--object-store-name=/tmp/ray/session_2026-03-27_19-32-46_991453_93332/sockets/plasma_store",
+    "--raylet-name=/tmp/ray/session_2026-03-27_19-32-46_991453_93332/sockets/raylet",
+    "--redis-address=None",
+    "--metrics-agent-port=62414",
+    "--runtime-env-agent-port=64854",
+    "--logging-rotate-bytes=536870912",
+    "--logging-rotate-backup-count=5",
+    "--runtime-env-agent-port=64854",
+    "--gcs-address=10.249.42.56:60744",
+    "--session-name=session_2026-03-27_19-32-46_991453_93332",
+    "--temp-dir=/tmp/ray",
+    "--webui=127.0.0.1:8265",
+    "--cluster-id=a216499b92ed66bc605aacb9a5ab30c3f9921828993d05f1ce39f56b",
+    "--startup-token=112",
+    "--worker-launch-time-ms=1774611172436",
+    "--node-id=8e17ea2277533fc1f305f7a448c42f658d91cec4403da9a0b649ae37",
+    "--runtime-env-hash=462212841"
+  ],
+  "program": "/home/luofeng/anaconda3/envs/verl/lib/python3.10/site-packages/ray/_private/workers/default_worker.py",
+  "git": {
+    "remote": "https://github.com/volcengine/verl",
+    "commit": "b5e711eab5da5c0f0d23856246e81085eed7b543"
+  },
+  "email": "hiluofeng@gmail.com",
+  "root": "/data1/luofeng/RL/verl",
+  "host": "2haoji-A100",
+  "executable": "/home/luofeng/anaconda3/envs/verl/bin/python3",
+  "cpu_count": 56,
+  "cpu_count_logical": 112,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_count": 4,
+  "disk": {
+    "/": {
+      "total": "527295578112",
+      "used": "128162619392"
+    }
+  },
+  "memory": {
+    "total": "236252397568"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-8a671b40-6fcb-5aab-1155-f284a2af557e"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-0013f2e6-3547-1101-0a9b-e0ee03fc9a44"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-04ba7edb-8a95-8d82-3294-142bdbb8ab03"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-8adb709e-856c-0a94-c6eb-f5820fa1e6aa"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "9t8tiq6odv29z7nuhffl0drdlvmb851w"
+}

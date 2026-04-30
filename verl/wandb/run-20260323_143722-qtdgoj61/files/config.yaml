@@ -1,0 +1,86 @@
+_wandb:
+    value:
+        cli_version: 0.22.2
+        e:
+            44llrlh04ls12waxjf2h8atwmaaw6ld9:
+                args:
+                    - --config-path
+                    - /data1/luofeng/RL/verl/trainer/config
+                    - --config-name
+                    - my_sft_trainer.yaml
+                cpu_count: 56
+                cpu_count_logical: 112
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "527295578112"
+                        used: "127077679104"
+                email: hiluofeng@gmail.com
+                executable: /home/luofeng/anaconda3/envs/verl/bin/python3.10
+                git:
+                    commit: b5e711eab5da5c0f0d23856246e81085eed7b543
+                    remote: https://github.com/volcengine/verl
+                gpu: NVIDIA A100-SXM4-40GB
+                gpu_count: 4
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: NVIDIA A100-SXM4-40GB
+                      uuid: GPU-8a671b40-6fcb-5aab-1155-f284a2af557e
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: NVIDIA A100-SXM4-40GB
+                      uuid: GPU-0013f2e6-3547-1101-0a9b-e0ee03fc9a44
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: NVIDIA A100-SXM4-40GB
+                      uuid: GPU-04ba7edb-8a95-8d82-3294-142bdbb8ab03
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "42949672960"
+                      name: NVIDIA A100-SXM4-40GB
+                      uuid: GPU-8adb709e-856c-0a94-c6eb-f5820fa1e6aa
+                host: 2haoji-A100
+                memory:
+                    total: "236252397568"
+                os: Linux-5.15.0-102-generic-x86_64-with-glibc2.31
+                program: -m verl.trainer.fsdp_sft_trainer
+                python: CPython 3.10.0
+                root: /data1/luofeng/RL/verl
+                startedAt: "2026-03-23T06:37:22.625022Z"
+                writerId: 44llrlh04ls12waxjf2h8atwmaaw6ld9
+        m: []
+        python_version: 3.10.0
+        t:
+            "1":
+                - 1
+                - 11
+                - 30
+                - 41
+                - 49
+                - 50
+                - 51
+                - 71
+                - 98
+                - 105
+            "2":
+                - 1
+                - 11
+                - 30
+                - 41
+                - 49
+                - 50
+                - 51
+                - 71
+                - 98
+                - 105
+            "3":
+                - 13
+            "4": 3.10.0
+            "5": 0.22.2
+            "6": 4.51.1
+            "12": 0.22.2
+            "13": linux-x86_64

@@ -1,0 +1,65 @@
+{
+  "os": "Linux-5.15.0-102-generic-x86_64-with-glibc2.31",
+  "python": "CPython 3.10.0",
+  "startedAt": "2026-04-07T14:26:25.696044Z",
+  "args": [
+    "--config-path",
+    "/data1/luofeng/RL/verl/trainer/config",
+    "--config-name",
+    "my_sft_trainer.yaml"
+  ],
+  "program": "-m verl.trainer.fsdp_sft_trainer",
+  "git": {
+    "remote": "https://github.com/volcengine/verl",
+    "commit": "b5e711eab5da5c0f0d23856246e81085eed7b543"
+  },
+  "email": "hiluofeng@gmail.com",
+  "root": "/data1/luofeng/RL/verl",
+  "host": "2haoji-A100",
+  "executable": "/home/luofeng/anaconda3/envs/verl/bin/python3.10",
+  "cpu_count": 56,
+  "cpu_count_logical": 112,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "gpu_count": 4,
+  "disk": {
+    "/": {
+      "total": "527295578112",
+      "used": "128776142848"
+    }
+  },
+  "memory": {
+    "total": "236252397568"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-8a671b40-6fcb-5aab-1155-f284a2af557e"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-0013f2e6-3547-1101-0a9b-e0ee03fc9a44"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-04ba7edb-8a95-8d82-3294-142bdbb8ab03"
+    },
+    {
+      "name": "NVIDIA A100-SXM4-40GB",
+      "memoryTotal": "42949672960",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-8adb709e-856c-0a94-c6eb-f5820fa1e6aa"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "wtxe2j449q5rt9hqcvqdrbcpykiup8fh"
+}

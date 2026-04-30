@@ -1,0 +1,7 @@
+# Should be mirrored in pyproject.toml
+cmake>=3.21
+ninja
+packaging
+setuptools==69.5.1
+torch==2.1.2
+wheel

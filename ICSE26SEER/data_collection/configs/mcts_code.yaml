@@ -1,0 +1,21 @@
+mode: "mcts"          
+model_dir: "Your_model_path"
+few_shot_path: "./mcts_math/few_shots/code.json"
+prompt_path: "./mcts_math/few_shots/prompt_code.json" 
+swap_space: 16
+temperature: 1.0
+max_tokens: 512
+errors_threshold: 3 
+prompt_wrap: "react"
+result_unwrap: "react"
+step_delim: "\n"  
+stop: ["</step>","</step>\n","</step>\n\n","</step>\n\n\n"] 
+max_depth: 5
+n_generate_sample: 5
+iterations: 60
+seed: 42
+batch_size: 50
+is_sampling: True
+verbose: False
+num_few_shot: 1
+

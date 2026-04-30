@@ -1,0 +1,85 @@
+hydra:
+  searchpath:
+    - file:/data1/luofeng/RL/verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+data:
+  train_files: ./verl/data/rl_data/train_step_small.parquet
+  val_files: ./verl/data/rl_data/test_step_small.parquet
+  train_batch_size: 32
+  max_prompt_length: 2048
+  max_response_length: 2048
+  prompt_key: prompt
+  reward_fn_key: data_source
+
+actor_rollout_ref:
+  model:
+    path: ./checkpoints/c2rust-sft-step-v3/qwen2.5-3B/global_step_2805
+    use_remove_padding: true
+    enable_gradient_checkpointing: true
+    lora_rank: 32
+    lora_alpha: 64
+    target_modules: all-linear
+
+  actor:
+    optim:
+      lr: 1e-6
+    ppo_mini_batch_size: 8
+    ppo_micro_batch_size_per_gpu: 1
+    # loss_agg_mode: seq-mean-token-sum-norm
+    fsdp_config:
+      model_dtype: bfloat16
+      param_offload: false
+      optimizer_offload: false
+    use_dynamic_bsz: true
+    # checkpoint:
+    #  save_contents: ['model', 'optimizer', 'extra', 'hf_model']
+    #  load_contents: ${actor_rollout_ref.actor.checkpoint.save_contents}
+
+
+  rollout:
+    name: vllm
+    dtype: bfloat16
+    log_prob_micro_batch_size_per_gpu: 8
+    tensor_model_parallel_size: 4
+    gpu_memory_utilization: 0.4
+    n: 8
+    max_num_batched_tokens: 4096
+    max_num_seqs: 8
+    free_cache_engine: true
+    enforce_eager: false
+
+  ref:
+    log_prob_micro_batch_size_per_gpu: 8
+
+algorithm:
+  adv_estimator: grpo
+  kl_ctrl:
+    kl_coef: 0.001
+
+critic:
+  enable: false
+
+custom_reward_function:
+  path: ./verl/reward_fn/c2rust_step.py
+  name: compute_score_with_model
+
+reward_model:
+  reward_kwargs: {}
+
+trainer:
+  default_local_dir: ./checkpoints/${trainer.project_name}/${trainer.experiment_name}
+  val_before_train: true
+  n_gpus_per_node: 4
+  nnodes: 1
+  save_freq: 10
+  test_freq: 20
+  max_actor_ckpt_to_keep: 2
+  total_epochs: 2
+  # resume_mode: disable
+  logger: ["console", "wandb"]
+  project_name: c2rust-rl-step-test
+  experiment_name: qwen2.5-3B-grpo-only-step

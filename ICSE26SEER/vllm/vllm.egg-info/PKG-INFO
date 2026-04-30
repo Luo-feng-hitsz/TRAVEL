@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: vllm
+Version: 0.3.3+cu117
+Summary: A high-throughput and memory-efficient inference and serving engine for LLMs
+Home-page: https://github.com/vllm-project/vllm
+Author: vLLM Team
+License: Apache 2.0
+Project-URL: Homepage, https://github.com/vllm-project/vllm
+Project-URL: Documentation, https://vllm.readthedocs.io/en/latest/
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cmake>=3.21
+Requires-Dist: ninja
+Requires-Dist: psutil
+Requires-Dist: ray>=2.9
+Requires-Dist: sentencepiece
+Requires-Dist: numpy
+Requires-Dist: torch==2.1.2
+Requires-Dist: transformers>=4.39.0
+Requires-Dist: xformers==0.0.23.post1
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: pydantic>=2.0
+Requires-Dist: prometheus_client>=0.18.0
+Requires-Dist: pynvml==11.5.0
+Requires-Dist: triton>=2.1.0
+Requires-Dist: outlines==0.0.34
+Requires-Dist: cupy-cuda11x
+
+# modify [vllm@f721096](https://github.com/vllm-project/vllm/tree/f721096d48a7e3b98dffcb9b400bf58989cef64d) for [AlphaMath](https://github.com/MARIO-Math-Reasoning/Super_MARIO) to support value model
+
+## Installation
+- Method 1
+```bash
+git clone https://github.com/MARIO-Math-Reasoning/vllm
+cd vllm
+pip install -e .
+```
+- Method 2
+  1. Install the original vllm v0.3.3
+  ```bash
+  git clone https://github.com/vllm-project/vllm.git
+  cd vllm
+  git checkout f721096
+  pip install -e .
+  ```
+  2. Copy the following modified files and added files from this repo to the above vllm folder.
+
+## modified files
+```
+vllm/core/scheduler.py
+vllm/engine/llm_engine.py
+vllm/model_executor/model_loader.py
+vllm/model_executor/models/__init__.py
+vllm/outputs.py
+vllm/sequence.py
+vllm/worker/model_runner.py
+pyproject.toml # because setuptools 70.0.0 was released May 21 2024, need to pin version of setuptools.
+requirements-build.txt # because setuptools 70.0.0 was released May 21 2024, need to pin version of setuptools.
+```
+
+## added files
+```
+tests/test_regression_withvalue.py
+vllm/model_executor/models/modeling_value_head.py
+```

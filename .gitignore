@@ -1,0 +1,18 @@
+# large outputs / datasets / models
+*.safetensors
+*.jsonl
+*.out
+
+# caches
+__pycache__/
+*.pyc
+.cache/
+.ipynb_checkpoints/
+
+# logs
+*.log
+
+# env
+.env
+.venv/
+venv/
