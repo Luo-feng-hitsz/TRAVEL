@@ -1,5 +1,5 @@
 model_paths=(
-    # base模型
+    # base
     # "./models/codegemma-7b-it"
     # "./models/deepseekcoder-6.7b"
     # "./models/Qwen2.5-Coder-3B-Instruct"
@@ -7,26 +7,21 @@ model_paths=(
     # "./models/deepseekcoder-33b"
     # "./models/Qwen3-Coder-30B-Instruct"
 
-    # sft模型: c2rust-sft-original
-    # "./checkpoints/c2rust-sft-original/qwen2.5-3B/global_step_1686"
-    # "./checkpoints/c2rust-sft-original/codegemma-7B-it/global_step_1686"
-    # "./checkpoints/c2rust-sft-original/qwen2.5-7B/global_step_1686"
+    # sft: c2rust-sft-no-step
+    # "./checkpoints/c2rust-sft-no-step/codegemma-7B-it/global_step_1870"
+    # "./checkpoints/c2rust-sft-no-step/qwen2.5-3B/global_step_1870"
+    # "./checkpoints/c2rust-sft-no-step/qwen2.5-7B/global_step_1870"
 
-    # sft模型: c2rust-sft-no-step-v3（和v2一样的数据，用的更简单的prompt）
-    # "./checkpoints/c2rust-sft-no-step-v3/codegemma-7B-it/global_step_1870"
-    # "./checkpoints/c2rust-sft-no-step-v3/qwen2.5-3B/global_step_1870"
-    # "./checkpoints/c2rust-sft-no-step-v3/qwen2.5-7B/global_step_1870"
+    # sft: c2rust-sft-step
+    # "./checkpoints/c2rust-sft-step/qwen2.5-7B/global_step_2805"
+    # "./checkpoints/c2rust-sft-step/qwen2.5-3B/global_step_2805"
+    # "./checkpoints/c2rust-sft-step/codegemma-7B-it/global_step_1870"
+    # "./checkpoints/c2rust-sft-step/deepseekcoder-6.7B/global_step_2805"
 
-    # sft模型: c2rust-sft-step-v3
-    # "./checkpoints/c2rust-sft-step-v3/qwen2.5-7B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step-v3/qwen2.5-3B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step-v3/codegemma-7B-it/global_step_1870"
-    # "./checkpoints/c2rust-sft-step-v3/deepseekcoder-6.7B/global_step_2805"
-
-    # rl模型由于用的都是lora，所以这里传入的路径应该是对应的sft模型的路径
-    "./checkpoints/c2rust-sft-step-v3/qwen2.5-3B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step-v3/qwen2.5-7B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step-v3/codegemma-7B-it/global_step_1870"
+    # As the RL model utilizes LoRA adapters, ensure the input path points to the base SFT model.
+    "./checkpoints/c2rust-sft-step/qwen2.5-3B/global_step_2805"
+    # "./checkpoints/c2rust-sft-step/qwen2.5-7B/global_step_2805"
+    # "./checkpoints/c2rust-sft-step/codegemma-7B-it/global_step_1870"
 )
 
 lora_paths=(
