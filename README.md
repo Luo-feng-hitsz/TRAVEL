@@ -25,9 +25,9 @@ pip install -r requirements.txt
 ---
 ### Data and Models
 - All the training data is located in the `./data` directory
-- Trained models are available on [Zenodo]()
+- Trained models and lora adapters are available on [Hugging face](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main).
 - Evaluation dataset(xCodeEval): `./translate/groundtruth`， We extracted different C and Rust solutions to the same problem from the evaluation set of [ntunlp/xCodeEval](https://github.com/ntunlp/xCodeEval.git), and further filtered them to ensure each pair passes all test cases.
-- Evaluation dataset(OS-Bench): The data are available on [Zenodo](), we collect the data from [torvalds/linux](https://github.com/torvalds/linux)
+- Evaluation dataset(OS-Bench): The data are available on [Hugging face](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main), we collect the data from [torvalds/linux](https://github.com/torvalds/linux)
 - Evaluation dataset(HW-Bench): Not yet public
 
 ---
@@ -59,6 +59,8 @@ Dependency and other information please refer to [ntunlp/xCodeEval](https://gith
 ```
 python my_eval.py
 ```
+## Training
+使用
 ## References
 - https://github.com/shuzhenggao/ICSE26SEER
 - https://github.com/verl-project/verl
