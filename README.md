@@ -25,9 +25,9 @@ pip install -r requirements.txt
 ---
 ### Data and Models
 - All the training data is located in the `./verl/data` directory
-- Trained models and lora adapters are available on [Hugging face](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main).
+- Trained models and lora adapters are available on [Huggingface TRAVEL_model](https://huggingface.co/Lauranne111/TRAVEL_model/tree/main) and [Huggingface TRAVEL_data](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main).
 - Evaluation dataset(xCodeEval): `./verl/translate/groundtruth`， We extracted different C and Rust solutions to the same problem from the evaluation set of [ntunlp/xCodeEval](https://github.com/ntunlp/xCodeEval.git), and further filtered them to ensure each pair passes all test cases.
-- Evaluation dataset(OS-Bench): The data are available on [Hugging face](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main), we collect the data from [torvalds/linux](https://github.com/torvalds/linux)
+- Evaluation dataset(OS-Bench): The data are available on [Huggingface TRAVEL_data](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main), we collect the data from [torvalds/linux](https://github.com/torvalds/linux)
 - Evaluation dataset(HW-Bench): Not yet public
 
 ---
