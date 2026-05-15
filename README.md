@@ -1,6 +1,4 @@
-# TRAVEL Inference Guide
-
-This README provides a minimal working guide on how to run inference using a **trained model**, as well as how to perform inference with **LoRA**.
+# TRAVEL Guide
 ## Installation
 
 Install all required dependencies with:
