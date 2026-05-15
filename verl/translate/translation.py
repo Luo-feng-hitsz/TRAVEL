@@ -95,28 +95,6 @@ C_code:
 Answer:
 """
 
-C2RUST_SHORTER_PROMPT = """Translate the following C program into an equivalent Rust program.
-
-Requirements:
-- Preserve the exact algorithm and output behavior.
-- The Rust program must compile as a standalone program with `main`.
-- Read all input using `std::io::stdin().read_to_string(...)` and parse using `split_whitespace()`.
-
-Use this input pattern:
-
-use std::io::{self, Read};
-
-let mut input = String::new();
-io::stdin().read_to_string(&mut input).unwrap();
-let mut iter = input.split_whitespace();
-
-Example:
-let x: i32 = iter.next().unwrap().parse().unwrap();
-
-C program:
-{c_code}
-"""
-
 C2RUST_NO_STEP_PROMPT = """Translate the following C program into an equivalent Rust program.
 
 Requirements:
@@ -192,15 +170,12 @@ class Infer:
         if "grpo" in self.project_name or "sft-step" in self.project_name:
             self.USER_CONTEXT = C2RUST_STEP_PROMPT
             use_prompt = "C2RUST_STEP_PROMPT"   
-        elif "sft-no-step-v3" in self.project_name:
+        elif "base" in self.project_name:
             self.USER_CONTEXT = C2RUST_BASE_PROMPT
             use_prompt = "C2RUST_BASE_PROMPT"
-        elif "base" in self.project_name:
+        else:
             self.USER_CONTEXT = C2RUST_NO_STEP_PROMPT
             use_prompt = "C2RUST_NO_STEP_PROMPT"
-        else:
-            self.USER_CONTEXT = C2RUST_SHORTER_PROMPT
-            use_prompt = "C2RUST_SHORTER_PROMPT"
         
         self.SYSTEM_CONTEXT = (
             "You are an expert in C-to-Rust translation."

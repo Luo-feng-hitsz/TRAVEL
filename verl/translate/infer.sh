@@ -8,20 +8,19 @@ model_paths=(
     # "./models/Qwen3-Coder-30B-Instruct"
 
     # sft: c2rust-sft-no-step
-    # "./checkpoints/c2rust-sft-no-step/codegemma-7B-it/global_step_1870"
-    # "./checkpoints/c2rust-sft-no-step/qwen2.5-3B/global_step_1870"
-    # "./checkpoints/c2rust-sft-no-step/qwen2.5-7B/global_step_1870"
+    # "./c2rust-sft-no-step/codegemma-7B-it"
+    # "./c2rust-sft-no-step/qwen2.5-3B"
+    # "./c2rust-sft-no-step/qwen2.5-7B"
 
     # sft: c2rust-sft-step
-    # "./checkpoints/c2rust-sft-step/qwen2.5-7B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step/qwen2.5-3B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step/codegemma-7B-it/global_step_1870"
-    # "./checkpoints/c2rust-sft-step/deepseekcoder-6.7B/global_step_2805"
+    # "./c2rust-sft-step/qwen2.5-7B"
+    # "./c2rust-sft-step/qwen2.5-3B"
+    # "./c2rust-sft-step/codegemma-7B-it"
 
     # As the RL model utilizes LoRA adapters, ensure the input path points to the base SFT model.
-    "./checkpoints/c2rust-sft-step/qwen2.5-3B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step/qwen2.5-7B/global_step_2805"
-    # "./checkpoints/c2rust-sft-step/codegemma-7B-it/global_step_1870"
+    "./c2rust-sft-step/qwen2.5-3B"
+    # "./c2rust-sft-step/qwen2.5-7B"
+    # "./c2rust-sft-step/codegemma-7B-it"
 )
 
 lora_paths=(
