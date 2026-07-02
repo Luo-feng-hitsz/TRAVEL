@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1225366089.svg)](https://doi.org/10.5281/zenodo.21132683)
 # TRAVEL
 
 Official implementation of **Towards Reliable C-to-Rust Translation with Rule-Guided Reasoning and Reinforcement Learning**.
