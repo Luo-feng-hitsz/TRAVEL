@@ -1,4 +1,9 @@
-# TRAVEL Guide
+# TRAVEL
+
+Official implementation of **Towards Reliable C-to-Rust Translation with Rule-Guided Reasoning and Reinforcement Learning**.
+
+This repository contains the implementation, training scripts, evaluation code, and datasets for reproducing the results reported in our ASE 2026 Industry Showcase paper.
+
 ## Installation
 
 Install all required dependencies with:
