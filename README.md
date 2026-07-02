@@ -88,6 +88,8 @@ Run training using:
 ```
 ### MCTS
 Refer to [shuzhenggao/ICSE26SEER](https://github.com/shuzhenggao/ICSE26SEER)
+The paper presents selected Rust translation rules together with representative C-to-Rust transformation examples. The complete set of translation rules used in TRAVEL is provided in:
+`./ICSE26SEER/data_collection/mcts_math/few_shots/prompt_code.json`
 In this repository, we have already adapted the corresponding configurations (including few-shot settings, ReAct prompting, evaluation methods, etc.). After extracting the reasoning steps and their corresponding scores from the generated data, the processed files are stored at:
 - `./verl/data/sft_data/train_step_score.parquet`
 - `./verl/data/sft_data/test_step_score.parquet`
