@@ -85,6 +85,13 @@ Refer to [shuzhenggao/ICSE26SEER](https://github.com/shuzhenggao/ICSE26SEER)
 In this repository, we have already adapted the corresponding configurations (including few-shot settings, ReAct prompting, evaluation methods, etc.). After extracting the reasoning steps and their corresponding scores from the generated data, the processed files are stored at:
 - `./verl/data/sft_data/train_step_score.parquet`
 - `./verl/data/sft_data/test_step_score.parquet`
+## Acknowledgements
+This project builds upon or is inspired by the following excellent open-source projects:
+- VERL [verl-project/verl](https://github.com/verl-project/verl)
+- ICSE26SEER [shuzhenggao/ICSE26SEER](https://github.com/shuzhenggao/ICSE26SEER)
+- xCodeEval [ntunlp/xCodeEval](https://github.com/ntunlp/xCodeEval.git)
+
+We sincerely thank the authors for making their code publicly available.
 ## References
 - https://github.com/shuzhenggao/ICSE26SEER
-- https://github.com/verl-project/verl
+- 
