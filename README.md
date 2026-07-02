@@ -22,11 +22,11 @@ pip install -r requirements.txt
 ## Resources
 ---
 ### Data and Models
-- All the training data is located in the `./verl/data` directory
+- Training data used in this work is located under `./verl/data` directory
 - Trained models and lora adapters are available on [Huggingface TRAVEL_model](https://huggingface.co/Lauranne111/TRAVEL_model/tree/main) and [Huggingface TRAVEL_data](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main).
 - Evaluation dataset(xCodeEval): `./verl/translate/groundtruth`， We extracted different C and Rust solutions to the same problem from the evaluation set of [ntunlp/xCodeEval](https://github.com/ntunlp/xCodeEval.git), and further filtered them to ensure each pair passes all test cases.
 - Evaluation dataset(OS-Bench): The data are available on [Huggingface TRAVEL_data](https://huggingface.co/datasets/Lauranne111/TRAVEL_data/tree/main), we collect the data from [torvalds/linux](https://github.com/torvalds/linux)
-- Evaluation dataset(HW-Bench): Not yet public
+- Evaluation dataset(HW-Bench): HW-Bench is proprietary and cannot be released due to industrial confidentiality.
 
 ---
 ## Inference
@@ -92,6 +92,3 @@ This project builds upon or is inspired by the following excellent open-source p
 - xCodeEval [ntunlp/xCodeEval](https://github.com/ntunlp/xCodeEval.git)
 
 We sincerely thank the authors for making their code publicly available.
-## References
-- https://github.com/shuzhenggao/ICSE26SEER
-- 
